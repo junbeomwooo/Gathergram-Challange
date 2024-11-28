@@ -10,7 +10,7 @@ export default function FourthSection() {
   const [isButtonOption, setIsButtonOption] = useState("monthly");
 
   return (
-    <div className="w-full h-[1082px] flex justify-center mt-32 bg-white">
+    <div className="w-full xl:h-[1082px] flex justify-center mt-32 bg-white">
       <div>
         {/* title */}
         <div className="text-center">
@@ -63,7 +63,7 @@ export default function FourthSection() {
         </div>
 
         {/* plans */}
-        <div className="xl:w-[1216px] h-[572px]  mt-16 xl:flex justify-between">
+        <div className="xl:w-[1216px] xl:h-[572px]  mt-16 xl:flex justify-between">
           {/* free plan */}
           <div className="xl:w-[592px] h-full rounded-xl border border-solid border-[#eaecf0] shadow-md">
             {/* header */}
@@ -167,7 +167,7 @@ export default function FourthSection() {
             <hr className="mt-10 border-[1px]" />
             {/* button */}
             <div className="flex justify-center mt-4">
-              <button className="xl:w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl w-full mx-4">
+              <button className="xl:w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl w-full mx-4 mb-4">
                 Get started
               </button>
             </div>
@@ -337,7 +337,7 @@ export default function FourthSection() {
               <hr className="mt-10 border-[1px]" />
               {/* button */}
               <div className="flex justify-center mt-4">
-                <button className="w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl">
+                <button className="w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl mb-4">
                   Get started
                 </button>
               </div>
@@ -504,7 +504,7 @@ export default function FourthSection() {
               <hr className="mt-10 border-[1px]" />
               {/* button */}
               <div className="flex justify-center mt-4">
-                <button className="w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl">
+                <button className="w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl mb-4">
                   Get started
                 </button>
               </div>

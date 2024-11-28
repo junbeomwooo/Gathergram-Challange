@@ -16,7 +16,7 @@ export default function Header() {
   const [isMenuOepn, setIsMenuOpen] = useState(false);
   const router = useRouter();
   return (
-    <>
+    <div className="max-w-[1921px] m-auto">
       {/* when mobile menu opens */}
       {isMenuOepn && (
         <div className="w-full h-full bg-white z-50 absolute opacity-90 flex justify-center items-center xl:hidden">
@@ -92,6 +92,6 @@ export default function Header() {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
