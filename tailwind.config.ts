@@ -13,6 +13,7 @@ export default {
         foreground: "var(--foreground)",
       },
       screens: {
+        '3xl': '1920px',
         "max-sm": { max: "640px" },
         "max-msm": { max: "700px" },
         "max-md": { max: "768px" },
