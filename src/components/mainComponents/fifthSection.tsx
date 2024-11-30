@@ -35,7 +35,7 @@ export default function FifthSection() {
     }}
 
     return (
-      <div className="w-full lg:h-[986px] bg-[#fff6fc] 2xl:px-40 px-8 pt-40 overflow-hidden pb-10 lg:pb-0">
+      <div className="w-full lg:h-[986px] bg-[#fff6fc] 2xl:px-40 px-8 pt-40 overflow-hidden pb-10 lg:pb-0" id="about">
         {/* Text and  Buttons*/}
         <div className="lg:flex justify-between">
           {/* Text */}

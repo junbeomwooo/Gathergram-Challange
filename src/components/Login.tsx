@@ -2,8 +2,11 @@
 
 import Image from "next/image";
 import { useState } from "react";
-
+import Cookies from "js-cookie";
 import Link from "next/link";
+import CustomSuccessAlert from "./CustomSuccessAlert";
+import CustomWarningAlert from "./CustomWarningAlert";
+
 // Images
 import WeddingImage from "@/../public/img/weddingImage.png";
 import secondLogoVector from "@/../public/img/secondLogoVector.png";
@@ -14,11 +17,131 @@ import AppleLogo from "@/../public/img/appleLogo.png";
 import Visible from "@/../public/img/visible.png";
 
 export default function Login() {
-
   // state for visible password
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+
+  /** Error Custom */
+  // State for Custom warning alert
+  const [isWarningAlertOpen, setIsWarningAlertOpen] = useState(false);
+  // Error which shows to user
+  const [wanringAlertMessage, setWanringAlertMessage] = useState("");
+
+  /** Success Custom */
+  // State for Custom success alert
+  const [isSuccessgAlertOpen, setIsSuccessAlertOpen] = useState(false);
+  // Success alert which shows to user
+  const [successAlertMessage, setSuccessAlertMessage] = useState("");
+
+
+  // To pass the email value to the custom component and navigate when the button is clicked in the Custom Success Alert component.
+  const [emailName, setEmailName] = useState("");
+
+
+  // funtion for login
+  const loginMember = async (email: string, password: string) => {
+    // API Endponits
+    const URL = "https://oyster-app-tkav7.ondigitalocean.app/auth/login";
+
+    try {
+      const response = await fetch(URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
+      });
+
+      const json = await response.json();
+      console.log(json);
+      console.log(response);
+      
+      // Successful Registration
+      if (response.ok) {
+        setSuccessAlertMessage("You have successfully logged in.");
+        setIsSuccessAlertOpen(true);
+        setEmailName(encodeURIComponent(email));
+
+        Cookies.set("user", json.data.accessToken);
+
+        // Failed Registration:
+      } else {
+        setWanringAlertMessage(json.message);
+        setIsWarningAlertOpen(true);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+
+  /** login account event */
+  const onSubmitLogin = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const current = e.currentTarget;
+
+    const email = current.email.value.trim().toLowerCase();
+    const password = current.password.value.trim();
+
+    /**  Regex validation */
+
+    // required
+    const valueRegex = /^(?!\s*$).+/;
+
+    // email format
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    const passwordRegex =
+      /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+
+    try {
+      // Check if a value is entered
+      if (!valueRegex.test(email)) {
+        throw new Error("Please enter your email.");
+      }
+
+      if (!valueRegex.test(password)) {
+        throw new Error("Please enter your password.");
+      }
+
+      // Check email format
+      if (!emailRegex.test(email)) {
+        throw new Error("Invalid email format.");
+      }
+
+      // check min 8 chars, 1 capital, 1 symbol, 1 number
+      if (!passwordRegex.test(password)) {
+        throw new Error(
+          "Password must be at least 8 characters long and include at least one uppercase letter, one special character, and one number."
+        );
+      }
+    } catch (error: unknown) {
+      let errorMessage: string;
+
+      if (error instanceof Error) {
+        errorMessage = error.toString();
+      } else if (typeof error === "string") {
+        errorMessage = error;
+      } else {
+        errorMessage = "An unknown error occurred";
+      }
+
+      setWanringAlertMessage(errorMessage);
+      setIsWarningAlertOpen(true);
+      return;
+    }
+
+    await loginMember(email, password);
+  };
   return (
-    <div className="w-full bg-white xl:flex 2xl:px-40 p-8 py-20">
+
+    <form
+      className="w-full bg-white xl:flex 2xl:px-40 p-8 py-20"
+      onSubmit={onSubmitLogin}
+    >
       {/* Image */}
       <div className="relative 2xl:max-w-[720px] hidden xl:block">
         <Image
@@ -71,6 +194,7 @@ export default function Login() {
               className="w-full h-[56px] rounded-lg border border-solid border-[#323232] text-[16px] font-[400] text-[#231f20] p-4 mb-8"
               placeholder="Enter email"
               type="email"
+              name="email"
             />
           </div>
           {/* password */}
@@ -82,6 +206,7 @@ export default function Login() {
               className="w-full h-[56px] rounded-lg border border-solid border-[#323232] text-[16px] font-[400] text-[#231f20] p-4"
               placeholder="Enter password"
               type={isPasswordVisible ? "text" : "password"}
+              name="password"
             />
             <Image
               src={Visible}
@@ -89,11 +214,14 @@ export default function Login() {
               width={19}
               height={18}
               className="w-[19px] h-[18px] absolute right-6 top-[50px] hover:cursor-pointer"
-              onClick={()=>setIsPasswordVisible(!isPasswordVisible)}
+              onClick={() => setIsPasswordVisible(!isPasswordVisible)}
             />
           </div>
           {/* button for login */}
-          <button className="w-full h-[56px] bg-[#f5169c] text-white text-[16px] font-[600] rounded-lg mt-6">
+          <button
+            className="w-full h-[56px] bg-[#f5169c] text-white text-[16px] font-[600] rounded-lg mt-6"
+            type="submit"
+          >
             Get Started
           </button>
         </div>
@@ -110,7 +238,10 @@ export default function Login() {
           {/* buttons for sns */}
           <div className="w-full h-[56px] flex justify-between gap-6 3xl:gap-0">
             {/* google */}
-            <button className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg">
+            <button
+              className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg"
+              type="button"
+            >
               <Image
                 src={GoogleLogo}
                 alt="google logo"
@@ -124,7 +255,10 @@ export default function Login() {
             </button>
 
             {/* facebook */}
-            <button className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg">
+            <button
+              className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg"
+              type="button"
+            >
               <Image
                 src={FacebookLogo}
                 alt="facebook logo"
@@ -138,7 +272,10 @@ export default function Login() {
             </button>
 
             {/* apple */}
-            <button className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg">
+            <button
+              className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg"
+              type="button"
+            >
               <Image
                 src={AppleLogo}
                 alt="apple logo"
@@ -166,6 +303,23 @@ export default function Login() {
           </h4>
         </div>
       </div>
-    </div>
+
+            {/* custom warning alert  */}
+            {isWarningAlertOpen && (
+        <CustomWarningAlert
+          message={wanringAlertMessage}
+          setIsWarningAlertOpen={setIsWarningAlertOpen}
+        />
+      )}
+
+      {/* custon success alert */}
+      {isSuccessgAlertOpen && (
+        <CustomSuccessAlert
+          message={successAlertMessage}
+          setIsSuccessAlertOpen={setIsSuccessAlertOpen}
+          emailName={emailName}
+        />
+      )}
+    </form>
   );
 }

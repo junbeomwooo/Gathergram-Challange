@@ -7,7 +7,7 @@ import CustomLoveStoryPage from "@/../public/img/CustomLoveStoryPage.png";
 
 export default function SecondSection() {
   return (
-    <div>
+    <div id="features">
             <div className="w-full 2xl:h-[711px] mt-32">
         {/*title */}
         <div className="2xl:w-[821px] m-auto">

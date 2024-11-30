@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { use, useState } from "react";
+import { useState } from "react";
 import CustomWarningAlert from "./CustomWarningAlert";
 import CustomSuccessAlert from "./CustomSuccessAlert";
+import Cookies from 'js-cookie';
+
 
 // images
 import WeddingImage from "@/../public/img/weddingImage.png";
@@ -78,12 +80,15 @@ export default function Signup() {
       });
 
       const json = await response.json();
+      console.log(json);
 
       // Successful Registration
       if (response.ok) {
         setSuccessAlertMessage("You have successfully registered.");
         setIsSuccessAlertOpen(true);
         setEmailName(encodeURIComponent(email));
+
+        Cookies.set("user", json.data.accessToken);
 
         // Failed Registration:
       } else {
@@ -99,7 +104,7 @@ export default function Signup() {
 
   // The Figma design shows the Australian code, so I created phone numbers for multiple countries. However, the server only accepts phone numbers in the North American format, so I will exclude countries other than the USA and Canada.
 
-  const onClickSumbit = async (e: any) => {
+  const onClickSumbit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const current = e.currentTarget;

@@ -4,7 +4,7 @@ import Dotline from "@/../public/img/Dotline.png";
 
 export default function ThirdSection() {
   return (
-    <div className="w-full xl:h-[898px] mt-32 bg-[#212121] text-white relative">
+    <div className="w-full xl:h-[898px] mt-32 bg-[#212121] text-white relative" id="howItWorks">
     <Image
       src={Dotline}
       alt="background dot line"

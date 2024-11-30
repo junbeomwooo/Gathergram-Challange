@@ -10,7 +10,7 @@ export default function FourthSection() {
   const [isButtonOption, setIsButtonOption] = useState("monthly");
 
   return (
-    <div className="w-full xl:h-[1082px] flex justify-center mt-32 bg-white">
+    <div className="w-full xl:h-[1082px] flex justify-center mt-32 bg-white" id="pricing">
       <div>
         {/* title */}
         <div className="text-center">

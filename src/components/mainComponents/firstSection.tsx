@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 
 // Images
@@ -10,12 +9,11 @@ import Component114 from "@/../../public/img/Component 114.png";
 import Component115 from "@/../public/img/Component 115.png";
 import Rectangle from "@/../public/img/Rectangle.png";
 
-
 export default function FirstSection() {
   return (
-    <div>
-            {/* Main: "Plan, Share, and Celebrate Your Big Day in One Place" */}
-            <div>
+    <div id="home">
+      {/* Main: "Plan, Share, and Celebrate Your Big Day in One Place" */}
+      <div>
         <div className="xl:flex 2xl:px-40 2xl:justify-between m-auto pt-30  px-8 ">
           <div>
             <div className="w-full h-[820px] mt-40">

@@ -8,7 +8,7 @@ import Icon10 from "@/../public/img/Icon10.png";
 
 export default function EighthSection() {
   return (
-    <div className="w-full xl:h-[670px] bg-white 2xl:px-28 py-20 px-8 ">
+    <div className="w-full xl:h-[670px] bg-white 2xl:px-28 py-20 px-8 " id="contact">
       {/* title */}
       <div>
         <h4 className="text-[16px] font-[600] text-[#f5169c]">Contact us</h4>
