@@ -2,7 +2,7 @@ import Image from "next/image";
 
 // images
 import Right2 from "@/../public/img/right2.png"
-import Rectangle from "@/../public/img/rectangle.png";
+import Rectangle from "@/../public/img/Rectangle.png";
 
 
 export default function SeventhSection() {

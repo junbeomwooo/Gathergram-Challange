@@ -24,9 +24,7 @@ export default function Header() {
   };
 
   return (
-    <div
-      className="max-w-[1921px] m-auto w-full fixed z-40 top-0 left-0 right-0"
-    >
+    <div className="max-w-[1921px] m-auto w-full fixed z-40 top-0 left-0 right-0">
       {/* when mobile menu opens */}
       {isMenuOepn && (
         <div className="w-full h-full bg-white z-50 fixed opacity-90 flex justify-center items-center xl:hidden">
@@ -163,24 +161,27 @@ export default function Header() {
         <div className="flex xl:text-[16px] sm:text-[13px] text-[12px] items-center">
           <button
             className="font-[400] mr-3 sm:mr-4 xl:mr-10 hover:underline w-[82px] h-[30px] sm:w-auto sm:h-auto bg-[#d934a0] sm:bg-white rounded-full text-white sm:text-black"
-            onClick={() => router.push("/login")}
+            onClick={() => {
+              router.push("/login");
+            }}
           >
             Sign in
           </button>
-          <button className="w-[82px] h-[30px] sm:w-[95px] sm:h-[40px] xl:w-[162px] xl:h-[60px] bg-black rounded-full hidden sm:flex justify-center items-center">
-            <h3
-              className="text-white font-[700] text-[12px] sm:text-[13px]"
-              onClick={() => router.push("/signup")}
-            >
+          <button
+            className="w-[82px] h-[30px] sm:w-[95px] sm:h-[40px] xl:w-[162px] xl:h-[60px] bg-black rounded-full hidden sm:flex justify-center items-center"
+            onClick={() => {
+              router.push("/signup");
+            }}
+          >
+            <h3 className="text-white font-[700] text-[12px] sm:text-[13px]">
               Get started
             </h3>
           </button>
-          <button>
+          <button onClick={() => setIsMenuOpen(!isMenuOepn)}>
             <LuMenu
               className={`${
                 pathname === "/" ? "blcok" : "hidden"
               } w-8 h-8 sm:w-12 sm:h-12 sm:ml-4 ml-3 xl:hidden`}
-              onClick={() => setIsMenuOpen(!isMenuOepn)}
             />
           </button>
         </div>

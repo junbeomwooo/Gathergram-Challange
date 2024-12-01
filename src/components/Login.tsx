@@ -139,7 +139,7 @@ export default function Login() {
   return (
 
     <form
-      className="w-full bg-white xl:flex 2xl:px-40 p-8 py-20"
+      className="w-full bg-white xl:flex 2xl:px-40 p-8 py-20 mt-[80px]"
       onSubmit={onSubmitLogin}
     >
       {/* Image */}
