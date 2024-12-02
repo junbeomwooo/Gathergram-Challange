@@ -1,11 +1,11 @@
 import MemberPage from "@/components/MemberPage";
 
 type PageProps = {
-  params: { email: string };
+  params: Promise<{ email: string }>;
 };
 
-export default function page({ params }: PageProps) {
-  const { email } = params;
+export default async function page({ params }: PageProps) {
+  const { email } = await params;
 
   return (
     <>
