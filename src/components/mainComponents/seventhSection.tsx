@@ -1,7 +1,9 @@
+"use client";
+
 import Image from "next/image";
-
-
+import { useRouter } from "next/navigation";
 export default function SeventhSection() {
+  const router = useRouter();
   return (
     <div className="w-full 2xl:h-[989px] bg-[#ffd0ec] flex items-center justify-center">
       <div className="2xl:w-[1640px] 2xl:h-[629px] bg-[#212121] 2xl:flex 2xl:px-28 py-20 justify-between px-8 h-full 2xl:rounded-2xl">
@@ -15,14 +17,28 @@ export default function SeventhSection() {
             do eiusmod tempor incididunt ut labore et aliqua. Ut enim ad minim
             veniam, quis ut aliquip ex ea commodo consequat.&quot;
           </h4>
-          <button className="flex w-full sm:w-[373px] h-[72px] bg-[#ffd0ec] rounded-full items-center justify-center m-auto 2xl:m-0 ">
-          <h3 className="mr-2">Create Your Event for Free</h3>
-          <Image src="/img/right2.png" alt="right button" width={24} height={24} />
+          <button
+            className="flex w-full sm:w-[373px] h-[72px] bg-[#ffd0ec] rounded-full items-center justify-center m-auto 2xl:m-0"
+            onClick={() => router.push("/signup")}
+          >
+            <h3 className="mr-2">Create Your Event for Free</h3>
+            <Image
+              src="/img/right2.png"
+              alt="right button"
+              width={24}
+              height={24}
+            />
           </button>
         </div>
 
         {/* image */}
-        <Image src="/img/Rectangle.png" alt="rectangle" width={567} height={480} className="w-[567px] h-auto rounded-xl mt-16 m-auto 2xl:m-0"/>
+        <Image
+          src="/img/Rectangle.png"
+          alt="rectangle"
+          width={567}
+          height={480}
+          className="w-[567px] h-auto rounded-xl mt-16 m-auto 2xl:m-0"
+        />
       </div>
     </div>
   );

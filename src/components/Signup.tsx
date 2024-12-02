@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import CustomWarningAlert from "./CustomWarningAlert";
 import CustomSuccessAlert from "./CustomSuccessAlert";
-import Cookies from 'js-cookie';
+import Cookies from "js-cookie";
 import { useSearchParams } from "next/navigation";
 
 export default function Signup() {
@@ -39,7 +39,6 @@ export default function Signup() {
 
   // For the querystring
   const searchParams = useSearchParams();
-
 
   // If a query string for email exists, it will set the input field’s default value to that email.
   const email = searchParams.get("email");
@@ -192,6 +191,12 @@ export default function Signup() {
     }
 
     await createMember(email, fullName, mobileNumber, password);
+  };
+
+  // When clicking on Unsupported features
+  const onClickUnsupported = () => {
+    setWanringAlertMessage("Sorry, this feature is not currently supported");
+    setIsWarningAlertOpen(true);
   };
 
   return (
@@ -387,7 +392,11 @@ export default function Signup() {
           {/* buttons for sns */}
           <div className="w-full h-[56px] flex justify-between gap-2 sm:gap-6 3xl:gap-0">
             {/* google */}
-            <button className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg">
+            <button
+              className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg"
+              type="button"
+              onClick={onClickUnsupported}
+            >
               <Image
                 src="/img/googleLogo.png"
                 alt="google logo"
@@ -401,7 +410,11 @@ export default function Signup() {
             </button>
 
             {/* facebook */}
-            <button className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg">
+            <button
+              className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg"
+              type="button"
+              onClick={onClickUnsupported}
+            >
               <Image
                 src="/img/facebookLogo.png"
                 alt="facebook logo"
@@ -415,7 +428,11 @@ export default function Signup() {
             </button>
 
             {/* apple */}
-            <button className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg">
+            <button
+              className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg"
+              type="button"
+              onClick={onClickUnsupported}
+            >
               <Image
                 src="/img/appleLogo.png"
                 alt="apple logo"
@@ -430,7 +447,7 @@ export default function Signup() {
           </div>
         </div>
 
-        {/* sign up */}
+        {/* sign in */}
         <div className="w-full h-[22px] flex justify-center items-center">
           <h4 className="text-[16px] font-[400] text-[#323232]">
             Already have an account?{" "}

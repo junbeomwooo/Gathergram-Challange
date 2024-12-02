@@ -1,8 +1,12 @@
+"use client";
+
 import Image from "next/image";
 
-// images
-
 export default function SixthSection() {
+  const onClickGetinTouch = () => {
+    window.location.href = "mailto:GatherGram@business.com";
+  };
+
   return (
     <div className="w-full xl:h-[1136px] bg-white mt-28 h-full mb-10 sm:mb-0">
       {/* title */}
@@ -141,7 +145,10 @@ export default function SixthSection() {
             Can’t find the answer you’re looking for? Please chat to our
             friendly team.
           </h2>
-          <button className="w-[134px] h-[48px] bg-[#f5169c] text-[white] rounded-[8px] mt-8">
+          <button
+            className="w-[134px] h-[48px] bg-[#f5169c] text-[white] rounded-[8px] mt-8"
+            onClick={onClickGetinTouch}
+          >
             Get in touch
           </button>
         </div>

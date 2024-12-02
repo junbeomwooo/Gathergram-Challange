@@ -2,10 +2,18 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import  { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
+
+import CustomWarningAlert from "../CustomWarningAlert";
 
 export default function FifthSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  /** Error Custom */
+  // State for Custom warning alert
+  const [isWarningAlertOpen, setIsWarningAlertOpen] = useState(false);
+  // Error which shows to user
+  const [wanringAlertMessage, setWanringAlertMessage] = useState("");
 
   const router = useRouter();
 
@@ -25,10 +33,21 @@ export default function FifthSection() {
     } else {
       // if user slides first page, it will move back to last image
       setCurrentSlide(4);
-    }}
+    }
+  };
 
-    return (
-      <div className="w-full lg:h-[986px] bg-[#fff6fc] 2xl:px-40 px-8 pt-40 overflow-hidden pb-10 lg:pb-0" id="about">
+    // When clicking on a plan that is not supported
+    const onClickOurCustomers = () => {
+      setWanringAlertMessage("Sorry, this feature is not currently supported");
+      setIsWarningAlertOpen(true);
+    }
+
+  return (
+    <>
+      <div
+        className="w-full lg:h-[986px] bg-[#fff6fc] 2xl:px-40 px-8 pt-40 overflow-hidden pb-10 lg:pb-0"
+        id="about"
+      >
         {/* Text and  Buttons*/}
         <div className="lg:flex justify-between">
           {/* Text */}
@@ -37,15 +56,20 @@ export default function FifthSection() {
               Don&apos;t just take our word for it
             </h1>
             <h4 className="text-[20px] font-[400] text-[#475467] mt-6">
-              Hear from sone of our amazing customers who are building faster.
+              Hear from some of our amazing customers who are building faster.
             </h4>
           </div>
           {/* Buttons */}
           <div className="flex mt-14 lg:mt-0">
-            <button className="w-[155px] h-[48px] bg-[#ffffff] border-[1.5px] border-solid border-[#d0d5dd] rounded-lg text-[16px] font-[600] text-[#344054] mr-6">
+            <button className="w-[155px] h-[48px] bg-[#ffffff] border-[1.5px] border-solid border-[#d0d5dd] rounded-lg text-[16px] font-[600] text-[#344054] mr-6" onClick={onClickOurCustomers}>
               Our customers
             </button>
-            <button className="w-[155px] h-[48px] bg-[#f5169c] rounded-lg text-[#ffffff] text-[16px] font-[600]" onClick={()=>{ router.push("/signup")}}>
+            <button
+              className="w-[155px] h-[48px] bg-[#f5169c] rounded-lg text-[#ffffff] text-[16px] font-[600]"
+              onClick={() => {
+                router.push("/signup");
+              }}
+            >
               Create account
             </button>
           </div>
@@ -99,7 +123,12 @@ export default function FifthSection() {
                     alt="star"
                     className="mr-1"
                   />{" "}
-                  <Image src="/img/Star.png" width={20} height={20} alt="star" />
+                  <Image
+                    src="/img/Star.png"
+                    width={20}
+                    height={20}
+                    alt="star"
+                  />
                 </div>
                 <div className="text-white">
                   <h1 className="text-[30px] font-[600] mb-5">Alisa Hester</h1>
@@ -153,7 +182,12 @@ export default function FifthSection() {
                     alt="star"
                     className="mr-1"
                   />{" "}
-                  <Image src="/img/Star.png" width={20} height={20} alt="star" />
+                  <Image
+                    src="/img/Star.png"
+                    width={20}
+                    height={20}
+                    alt="star"
+                  />
                 </div>
                 <div className="text-white">
                   <h1 className="text-[30px] font-[600] mb-5">Rich Wilson</h1>
@@ -208,7 +242,12 @@ export default function FifthSection() {
                     alt="star"
                     className="mr-1"
                   />{" "}
-                  <Image src="/img/Star.png" width={20} height={20} alt="star" />
+                  <Image
+                    src="/img/Star.png"
+                    width={20}
+                    height={20}
+                    alt="star"
+                  />
                 </div>
                 <div className="text-white">
                   <h1 className="text-[30px] font-[600] mb-5">Annie Stanley</h1>
@@ -261,7 +300,12 @@ export default function FifthSection() {
                     alt="star"
                     className="mr-1"
                   />{" "}
-                  <Image src="/img/Star.png" width={20} height={20} alt="star" />
+                  <Image
+                    src="/img/Star.png"
+                    width={20}
+                    height={20}
+                    alt="star"
+                  />
                 </div>
                 <div className="text-white">
                   <h1 className="text-[30px] font-[600] mb-5">Johnny Bell</h1>
@@ -312,7 +356,12 @@ export default function FifthSection() {
                     alt="star"
                     className="mr-1"
                   />{" "}
-                  <Image src="/img/Star.png" width={20} height={20} alt="star" />
+                  <Image
+                    src="/img/Star.png"
+                    width={20}
+                    height={20}
+                    alt="star"
+                  />
                 </div>
                 <div className="text-white">
                   <h1 className="text-[30px] font-[600] mb-5">Mia Ward</h1>
@@ -330,7 +379,10 @@ export default function FifthSection() {
 
         {/* buttons for slides */}
         <div className="flex mt-8">
-          <button className="w-[56px] h-[56px] rounded-full border border-solid border-[#eaecf0] bg-white flex justify-center items-center mr-6" onClick={previousButton}>
+          <button
+            className="w-[56px] h-[56px] rounded-full border border-solid border-[#eaecf0] bg-white flex justify-center items-center mr-6"
+            onClick={previousButton}
+          >
             <Image
               src="/img/left.png"
               alt="left buttons for slides"
@@ -339,7 +391,10 @@ export default function FifthSection() {
             />
           </button>
 
-          <button className="w-[56px] h-[56px] rounded-full border border-solid border-[#eaecf0] bg-white flex justify-center items-center" onClick={nextButton}>
+          <button
+            className="w-[56px] h-[56px] rounded-full border border-solid border-[#eaecf0] bg-white flex justify-center items-center"
+            onClick={nextButton}
+          >
             <Image
               src="/img/right.png"
               alt="right buttons for slides"
@@ -349,5 +404,12 @@ export default function FifthSection() {
           </button>
         </div>
       </div>
-    );
-  };
+      {isWarningAlertOpen && (
+        <CustomWarningAlert
+          message={wanringAlertMessage}
+          setIsWarningAlertOpen={setIsWarningAlertOpen}
+        />
+      )}
+    </>
+  );
+}

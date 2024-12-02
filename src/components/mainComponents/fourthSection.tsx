@@ -3,11 +3,28 @@
 import { useState } from "react";
 import Image from "next/image";
 
+
+import CustomWarningAlert from "../CustomWarningAlert";
+
 export default function FourthSection() {
   // state for buttons (montly || annual);
   const [isButtonOption, setIsButtonOption] = useState("monthly");
 
+    /** Error Custom */
+  // State for Custom warning alert
+  const [isWarningAlertOpen, setIsWarningAlertOpen] = useState(false);
+  // Error which shows to user
+  const [wanringAlertMessage, setWanringAlertMessage] = useState("");
+
+  // When clicking on a plan that is not supported
+  const onClickPlan = () => {
+    setWanringAlertMessage("Sorry, this feature is not currently supported");
+    setIsWarningAlertOpen(true);
+  }
+
+
   return (
+    <>
     <div className="w-full xl:h-[1082px] flex justify-center mt-32 bg-white" id="pricing">
       <div>
         {/* title */}
@@ -165,7 +182,7 @@ export default function FourthSection() {
             <hr className="mt-10 border-[1px]" />
             {/* button */}
             <div className="flex justify-center mt-4">
-              <button className="xl:w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl w-full mx-10 sm:mx-4 mb-4">
+              <button className="xl:w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl w-full mx-10 sm:mx-4 mb-4" onClick={onClickPlan}>
                 Get started
               </button>
             </div>
@@ -335,7 +352,7 @@ export default function FourthSection() {
               <hr className="mt-10 border-[1px]" />
               {/* button */}
               <div className="flex justify-center mt-4">
-              <button className="xl:w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl w-full mx-10 sm:mx-4 mb-4">
+              <button className="xl:w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl w-full mx-10 sm:mx-4 mb-4" onClick={onClickPlan}>
                   Get started
                 </button>
               </div>
@@ -502,7 +519,7 @@ export default function FourthSection() {
               <hr className="mt-10 border-[1px]" />
               {/* button */}
               <div className="flex justify-center mt-4">
-              <button className="xl:w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl w-full mx-10 sm:mx-4 mb-4">
+              <button className="xl:w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl w-full mx-10 sm:mx-4 mb-4" onClick={onClickPlan}>
                   Get started
                 </button>
               </div>
@@ -511,5 +528,9 @@ export default function FourthSection() {
         </div>
       </div>
     </div>
+    {isWarningAlertOpen && <CustomWarningAlert message={wanringAlertMessage} setIsWarningAlertOpen={setIsWarningAlertOpen
+
+    }/>}
+    </>
   );
 }

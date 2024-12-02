@@ -23,10 +23,8 @@ export default function Login() {
   // Success alert which shows to user
   const [successAlertMessage, setSuccessAlertMessage] = useState("");
 
-
   // To pass the email value to the custom component and navigate when the button is clicked in the Custom Success Alert component.
   const [emailName, setEmailName] = useState("");
-
 
   // funtion for login
   const loginMember = async (email: string, password: string) => {
@@ -48,7 +46,7 @@ export default function Login() {
       const json = await response.json();
       console.log(json);
       console.log(response);
-      
+
       // Successful Registration
       if (response.ok) {
         setSuccessAlertMessage("You have successfully logged in.");
@@ -66,7 +64,6 @@ export default function Login() {
       console.log(error);
     }
   };
-
 
   /** login account event */
   const onSubmitLogin = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -127,8 +124,13 @@ export default function Login() {
 
     await loginMember(email, password);
   };
-  return (
 
+  // When clicking on Unsupported features
+  const onClickUnsupported = () => {
+    setWanringAlertMessage("Sorry, this feature is not currently supported");
+    setIsWarningAlertOpen(true);
+  };
+  return (
     <form
       className="w-full bg-white xl:flex 2xl:px-40 p-8 py-20 mt-[80px]"
       onSubmit={onSubmitLogin}
@@ -232,6 +234,7 @@ export default function Login() {
             <button
               className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg"
               type="button"
+              onClick={onClickUnsupported}
             >
               <Image
                 src="/img/googleLogo.png"
@@ -249,6 +252,7 @@ export default function Login() {
             <button
               className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg"
               type="button"
+              onClick={onClickUnsupported}
             >
               <Image
                 src="/img/facebookLogo.png"
@@ -266,6 +270,7 @@ export default function Login() {
             <button
               className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg"
               type="button"
+              onClick={onClickUnsupported}
             >
               <Image
                 src="/img/appleLogo.png"
@@ -295,8 +300,8 @@ export default function Login() {
         </div>
       </div>
 
-            {/* custom warning alert  */}
-            {isWarningAlertOpen && (
+      {/* custom warning alert  */}
+      {isWarningAlertOpen && (
         <CustomWarningAlert
           message={wanringAlertMessage}
           setIsWarningAlertOpen={setIsWarningAlertOpen}
