@@ -1,13 +1,13 @@
 import MemberPage from "@/components/MemberPage";
 
-export default async function page({
+export default function page({
 
   params,
 }: {
   params: { email: string};
 }) {
 
-  const { email  } = await params;
+  const { email  } = params;
   
   return (
     <>

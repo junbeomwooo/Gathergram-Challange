@@ -18,11 +18,13 @@ export default function CustomSuccessAlert({
   const router = useRouter();
 
   return (
-    <div className="w-[500px] h-[330px] fixed bg-white text-black rounded-2xl left-1/2 top-1/4 transform -translate-x-1/2 z-40 pt-6 px-6 border border-solid m-auto">
+    <div className="w-[350px] sm:w-[500px] h-[350px] sm:h-[330px] fixed bg-white text-black rounded-2xl left-1/2 top-1/4 transform -translate-x-1/2 z-40 pt-6 px-6 border border-solid m-auto">
       <FaRegCheckCircle className="w-[60px] h-[60px] text-[#eb44b2] m-auto" />
       <div className="ml-4 mt-4 text-center">
         <h1 className="text-[25px] mt-6">Success</h1>
-        <h3 className="text-[16px] mt-6 leading-[25px] h-[90px]">{msg}</h3>
+        <h3 className="text-[16px] mt-6 leading-[25px] h-[110px] sm:h-[90px]">
+          {msg}
+        </h3>
         <hr className="" />
 
         <button

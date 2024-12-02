@@ -75,7 +75,6 @@ export default function Signup() {
       });
 
       const json = await response.json();
-      console.log(json);
 
       // Successful Registration
       if (response.ok) {
