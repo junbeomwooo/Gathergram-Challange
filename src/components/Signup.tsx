@@ -6,6 +6,7 @@ import { useState } from "react";
 import CustomWarningAlert from "./CustomWarningAlert";
 import CustomSuccessAlert from "./CustomSuccessAlert";
 import Cookies from 'js-cookie';
+import { useSearchParams } from "next/navigation";
 
 
 // images
@@ -48,6 +49,13 @@ export default function Signup() {
     code: "+1",
     src: Canada,
   });
+
+  // For the querystring
+  const searchParams = useSearchParams();
+
+
+  // If a query string for email exists, it will set the input field’s default value to that email.
+  const email = searchParams.get("email");
 
   // Array containing country codes and informations
   const arrayCountryCodes = [
@@ -224,7 +232,7 @@ export default function Signup() {
           <h1 className="text-[30px] font-[700] text-[#110D06] mb-4">
             Sign up
           </h1>
-          <h4 className="text-[16px] font-[400] text-[#2e2e2e] leading-[22.4px] mt-[8px] w-[456px]">
+          <h4 className="text-[16px] font-[400] text-[#2e2e2e] leading-[22.4px] mt-[8px] sm:w-[456px]">
             Enter your details below to signup or sign in with existing account.
           </h4>
         </div>
@@ -240,6 +248,7 @@ export default function Signup() {
               className="w-full h-[56px] rounded-lg border border-solid border-[#323232] text-[16px] font-[400] text-[#231f20] p-4 mb-8"
               placeholder="Enter email"
               name="email"
+              defaultValue={email || ""}
             />
           </div>
           {/* first name */}
@@ -390,7 +399,7 @@ export default function Signup() {
           </div>
 
           {/* buttons for sns */}
-          <div className="w-full h-[56px] flex justify-between gap-6 3xl:gap-0">
+          <div className="w-full h-[56px] flex justify-between gap-2 sm:gap-6 3xl:gap-0">
             {/* google */}
             <button className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg">
               <Image
@@ -414,7 +423,7 @@ export default function Signup() {
                 height={16}
                 className="w-[16px] h-[16px]"
               />
-              <h3 className="text-[16px] font-[600] text-[#323232] ml-3">
+              <h3 className="text-[13px] sm:text-[16px] font-[600] text-[#323232] ml-3">
                 Facebook
               </h3>
             </button>
@@ -428,7 +437,7 @@ export default function Signup() {
                 height={18.48}
                 className="w-[15.05px] h-[18.48px] mb-1"
               />
-              <h3 className="text-[16px] font-[600] text-[#323232] ml-3">
+              <h3 className="text-[13px] sm:text-[16px] font-[600] text-[#323232] ml-3">
                 Apple
               </h3>
             </button>
@@ -441,7 +450,7 @@ export default function Signup() {
             Already have an account?{" "}
             <Link
               href="/login"
-              className="text-[16px] font-[400] text-[#7e0c65]"
+              className="text-[13px] sm:text-[16px] font-[400] text-[#7e0c65]"
             >
               Sign in
             </Link>

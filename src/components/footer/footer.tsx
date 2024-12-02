@@ -10,6 +10,7 @@ import Linkedin from "@/../public/img/Icon awesome-linkedin.png";
 import Facebook from "@/../public/img/Icon awesome-facebook.png";
 import Twitter from "@/../public/img/Icon awesome-twitter.png";
 import { TiArrowSortedDown } from "react-icons/ti";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
   // states for dropdown
@@ -17,6 +18,14 @@ export default function Footer() {
   const [isSupportUsOpen, setIsSupportUsOpen] = useState(false);
   const [isPartnerOpen, setIsPartnerOpen] = useState(false);
   const [isContactUsOpen, setIsContactUsOpen] = useState(false);
+
+  const pathname = usePathname();
+
+  // scroll to section (only when pathname is "/")
+  const onClickMoveToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <div className="w-full lg:h-[655px] h-full bg-[#212121] text-white relative">
@@ -99,31 +108,60 @@ export default function Footer() {
           {/* Menu */}
           <div className="lg:flex w-7/12 justify-between hidden">
             {/* Navigate */}
-            <div className="flex-col text-[16px] font-[300]">
+            <div
+              className={`text-[16px] font-[300] ${
+                pathname === "/" ? "flex-col" : "hidden"
+              }`}
+            >
               <h1 className="text-[16px] font-[600] mb-6">Navigate</h1>
-              <h3 className="mb-6">Home</h3>
-              <h3 className="mb-6">Features</h3>
-              <h3 className="mb-6">How It Works</h3>
-              <h3 className="mb-6">Pricing</h3>
-              <h3 className="mb-6">About</h3>
-              <h3>Contact</h3>
+              <h3
+                className="mb-6 hover:cursor-pointer"
+                onClick={() => onClickMoveToSection("home")}
+              >
+                Home
+              </h3>
+              <h3
+                className="mb-6 hover:cursor-pointer"
+                onClick={() => onClickMoveToSection("features")}
+              >
+                Features
+              </h3>
+              <h3
+                className="mb-6 hover:cursor-pointer"
+                onClick={() => onClickMoveToSection("howItWorks")}
+              >
+                How It Works
+              </h3>
+              <h3
+                className="mb-6 hover:cursor-pointer"
+                onClick={() => onClickMoveToSection("pricing")}
+              >
+                Pricing
+              </h3>
+              <h3
+                className="mb-6 hover:cursor-pointer"
+                onClick={() => onClickMoveToSection("about")}
+              >
+                About
+              </h3>
+              <h3 className="hover:cursor-pointer" onClick={() => onClickMoveToSection("contact")}>Contact</h3>
             </div>
 
             {/* Support Us */}
             <div className="flex-col text-[16px] font-[300]">
               <h1 className="text-[16px] font-[600] mb-6">Support Us</h1>
-              <h3 className="mb-6">FAQ's</h3>
-              <h3 className="mb-6">Contact Us</h3>
-              <h3 className="mb-6">Support Center</h3>
-              <h3>Security</h3>
+              <h3 className="mb-6 hover:cursor-pointer">FAQ&apos;s</h3>
+              <h3 className="mb-6 hover:cursor-pointer">Contact Us</h3>
+              <h3 className="mb-6 hover:cursor-pointer">Support Center</h3>
+              <h3 className="hover:cursor-pointer">Security</h3>
             </div>
 
             {/* Partner */}
             <div className="flex-col text-[16px] font-[300]">
               <h1 className="text-[16px] font-[600] mb-6">Partner</h1>
-              <h3 className="mb-6">Our</h3>
-              <h3 className="mb-6">Partners</h3>
-              <h3 className="mb-6">Subscriber</h3>
+              <h3 className="mb-6 hover:cursor-pointer">Our</h3>
+              <h3 className="mb-6 hover:cursor-pointer">Partners</h3>
+              <h3 className="mb-6 hover:cursor-pointer">Subscriber</h3>
             </div>
 
             {/* Contact US */}
@@ -141,7 +179,9 @@ export default function Footer() {
           <div className="lg:hidden w-full mt-20 pb-10">
             {/* Navigate */}
             <div
-              className="flex w-full hover:cursor-pointer"
+              className={`w-full hover:cursor-pointer ${
+                pathname === "/" ? "flex" : "hidden"
+              }`}
               onClick={() => setIsNavigateOpen(!isNavigateOpen)}
             >
               <h1>Navigate</h1>
@@ -149,13 +189,47 @@ export default function Footer() {
             </div>
             {isNavigateOpen && (
               <div>
-                <div className="flex-col text-[16px] font-[300] mt-6">
-                  <h3 className="mb-6">Home</h3>
-                  <h3 className="mb-6">Features</h3>
-                  <h3 className="mb-6">How It Works</h3>
-                  <h3 className="mb-6">Pricing</h3>
-                  <h3 className="mb-6">About</h3>
-                  <h3>Contact</h3>
+                <div
+                  className={`text-[16px] font-[300] mt-6 ${
+                    pathname === "/" ? "flex-col" : "hidden"
+                  }`}
+                >
+                  <h3
+                    className="mb-6 hover:cursor-pointer"
+                    onClick={() => onClickMoveToSection("home")}
+                  >
+                    Home
+                  </h3>
+                  <h3
+                    className="mb-6  hover:cursor-pointer"
+                    onClick={() => onClickMoveToSection("features")}
+                  >
+                    Features
+                  </h3>
+                  <h3
+                    className="mb-6  hover:cursor-pointer"
+                    onClick={() => onClickMoveToSection("howItWorks")}
+                  >
+                    How It Works
+                  </h3>
+                  <h3
+                    className="mb-6  hover:cursor-pointer"
+                    onClick={() => onClickMoveToSection("pricing")}
+                  >
+                    Pricing
+                  </h3>
+                  <h3
+                    className="mb-6  hover:cursor-pointer"
+                    onClick={() => onClickMoveToSection("about")}
+                  >
+                    About
+                  </h3>
+                  <h3
+                    className="hover:cursor-pointer"
+                    onClick={() => onClickMoveToSection("contact")}
+                  >
+                    Contact
+                  </h3>
                 </div>
               </div>
             )}
@@ -171,10 +245,10 @@ export default function Footer() {
             {isSupportUsOpen && (
               <div>
                 <div className="flex-col text-[16px] font-[300] mt-6">
-                  <h3 className="mb-6">FAQ`s</h3>
-                  <h3 className="mb-6">Contact Us</h3>
-                  <h3 className="mb-6">Support Center</h3>
-                  <h3>Security</h3>
+                  <h3 className="mb-6 hover:cursor-pointer">FAQ`s</h3>
+                  <h3 className="mb-6 hover:cursor-pointer">Contact Us</h3>
+                  <h3 className="mb-6 hover:cursor-pointer">Support Center</h3>
+                  <h3 className="hover:cursor-pointer">Security</h3>
                 </div>
               </div>
             )}
@@ -190,9 +264,9 @@ export default function Footer() {
             {isPartnerOpen && (
               <div>
                 <div className="flex-col text-[16px] font-[300] mt-6">
-                  <h3 className="mb-6">Our</h3>
-                  <h3 className="mb-6">Partners</h3>
-                  <h3>Subscriber</h3>
+                  <h3 className="mb-6 hover:cursor-pointer">Our</h3>
+                  <h3 className="mb-6 hover:cursor-pointer">Partners</h3>
+                  <h3 className="hover:cursor-pointer">Subscriber</h3>
                 </div>
               </div>
             )}

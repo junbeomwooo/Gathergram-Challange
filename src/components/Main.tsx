@@ -9,7 +9,7 @@ import EighthSection from "./mainComponents/eighthSection";
 
 export default function Main() {
   return (
-    <div className="max-w-[1921px] m-auto mt-[80px]">
+    <div className="max-w-[1921px] m-auto mt-[110px]">
       {/* "Plan, Share, and Celebrate Your Big Day in One Place" */}
       <FirstSection />
 

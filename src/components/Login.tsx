@@ -177,7 +177,7 @@ export default function Login() {
           <h1 className="text-[30px] font-[700] text-[#110D06] mb-4">
             Get Started
           </h1>
-          <h4 className="text-[16px] font-[400] text-[#2e2e2e] leading-[22.4px] mt-[8px] w-[456px]">
+          <h4 className="text-[16px] font-[400] text-[#2e2e2e] leading-[22.4px] mt-[8px] sm:w-[456px]">
             Enter your email address below to login to existing account or sign
             up with new account.
           </h4>
@@ -236,7 +236,7 @@ export default function Login() {
           </div>
 
           {/* buttons for sns */}
-          <div className="w-full h-[56px] flex justify-between gap-6 3xl:gap-0">
+          <div className="w-full h-[56px] flex justify-between gap-2 sm:gap-6 3xl:gap-0">
             {/* google */}
             <button
               className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg"
@@ -249,7 +249,7 @@ export default function Login() {
                 height={16}
                 className="w-[16px] h-[16px]"
               />
-              <h3 className="text-[16px] font-[600] text-[#323232] ml-3">
+              <h3 className="text-[13px] sm:text-[16px] font-[600] text-[#323232] ml-3">
                 Google
               </h3>
             </button>
@@ -266,7 +266,7 @@ export default function Login() {
                 height={16}
                 className="w-[16px] h-[16px]"
               />
-              <h3 className="text-[16px] font-[600] text-[#323232] ml-3">
+              <h3 className="text-[13px] sm:text-[16px] font-[600] text-[#323232] ml-3">
                 Facebook
               </h3>
             </button>
@@ -283,7 +283,7 @@ export default function Login() {
                 height={18.48}
                 className="w-[15.05px] h-[18.48px] mb-1"
               />
-              <h3 className="text-[16px] font-[600] text-[#323232] ml-3">
+              <h3 className="text-[13px] sm:text-[16px] font-[600] text-[#323232] ml-3">
                 Apple
               </h3>
             </button>

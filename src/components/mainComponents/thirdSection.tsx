@@ -20,7 +20,7 @@ export default function ThirdSection() {
     <div className="w-full flex justify-center">
       <div className="xl:w-[1639px] xl:h-[296px] xl:flex justify-between mt-32 z-10">
         {/* Icon here */}
-        <div className="xl:w-[301px] xl:h-[256px] 2xl:w-[351px] 2xl:h-[296px] bg-[#fdfdfd] xl:rounded-3xl text-black px-10 py-20 w-[400px] h-[400px] rounded-full text-center pt-32 m-auto mb-8 xl:pt-[45px] 2xl:pt-[80px] ">
+        <div className="xl:w-[301px] xl:h-[256px] 2xl:w-[351px] 2xl:h-[296px] bg-[#fdfdfd] xl:rounded-3xl text-black px-10 py-20 w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] rounded-full text-center pt-[100px] sm:pt-32 m-auto mb-8 xl:pt-[45px] 2xl:pt-[80px]">
           <h2 className="text-[44px] font-[400] mb-5">Icon here</h2>
           <h3 className="text-[24px] font-[400] mb-5">Sign up</h3>
           <h4 className="text-[18px] font-[400] leading-[24px]">
@@ -28,7 +28,7 @@ export default function ThirdSection() {
           </h4>
         </div>
         {/* Icons */}
-        <div className="xl:w-[301px] xl:h-[256px] 2xl:w-[351px] 2xl:h-[296px] bg-[#ffdef4] xl:rounded-3xl text-black px-10 py-20 w-[400px] h-[400px] rounded-full text-center pt-32 m-auto  mb-8 xl:pt-[45px] 2xl:pt-[80px]">
+        <div className="xl:w-[301px] xl:h-[256px] 2xl:w-[351px] 2xl:h-[296px] bg-[#ffdef4] xl:rounded-3xl text-black px-10 py-20  w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] rounded-full text-center  pt-[100px] sm:pt-32 m-auto  mb-8 xl:pt-[45px] 2xl:pt-[80px]">
           <h2 className="text-[44px] font-[400] mb-5">Icons</h2>
           <h3 className="text-[24px] font-[400] mb-5">Positive Reviews</h3>
           <h4 className="text-[18px] font-[400] leading-[24px]">
@@ -36,7 +36,7 @@ export default function ThirdSection() {
           </h4>
         </div>
         {/* Icon */}
-        <div className="xl:w-[301px] xl:h-[256px] 2xl:w-[351px] 2xl:h-[296px] bg-[#fdfdfd] xl:rounded-3xl text-black px-10 py-20 w-[400px] h-[400px] rounded-full text-center pt-32 m-auto mb-8 xl:pt-[45px] 2xl:pt-[80px] ">
+        <div className="xl:w-[301px] xl:h-[256px] 2xl:w-[351px] 2xl:h-[296px] bg-[#fdfdfd] xl:rounded-3xl text-black px-10 py-20  w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] rounded-full text-center  pt-[100px] sm:pt-32 m-auto mb-8 xl:pt-[45px] 2xl:pt-[80px] ">
           <h2 className="text-[44px] font-[400] mb-5">Icon</h2>
           <h3 className="text-[24px] font-[400] mb-5">Regular Users</h3>
           <h4 className="text-[18px] font-[400] leading-[24px]">
@@ -44,7 +44,7 @@ export default function ThirdSection() {
           </h4>
         </div>
         {/* Icon */}
-        <div className="xl:w-[301px] xl:h-[256px] 2xl:w-[351px] 2xl:h-[296px] bg-[#fdfdfd] xl:rounded-3xl text-black px-10 py-20 w-[400px] h-[400px] rounded-full text-center pt-32 m-auto mb-8 xl:pt-[45px] 2xl:pt-[80px] ">
+        <div className="xl:w-[301px] xl:h-[256px] 2xl:w-[351px] 2xl:h-[296px] bg-[#fdfdfd] xl:rounded-3xl text-black px-10 py-20  w-[350px] h-[350px] sm:w-[400px] sm:h-[400px] rounded-full text-center  pt-[100px] peer-first:sm:pt-32 m-auto mb-8 xl:pt-[45px] 2xl:pt-[80px] ">
           <h2 className="text-[44px] font-[400] mb-5">Icon</h2>
           <h3 className="text-[24px] font-[400] mb-5">Team Members</h3>
           <h4 className="text-[18px] font-[400] leading-[24px]">

@@ -27,8 +27,8 @@ export default function FourthSection() {
         </div>
 
         {/* buttons */}
-        <div className="flex justify-center items-center mt-10">
-          <div className="flex w-[389px] h-[56px] bg-[#F9FAFB] border border-solid border-[#f2f4f7] text-[16px] font-[600] items-center">
+        <div className="flex justify-center items-center mt-10 px-8 sm:px-0">
+          <div className="flex sm:w-[389px] h-[56px] bg-[#F9FAFB] border border-solid border-[#f2f4f7] text-[16px] font-[600] items-center">
             {/* monthly */}
             <button
               className={` ${
@@ -167,7 +167,7 @@ export default function FourthSection() {
             <hr className="mt-10 border-[1px]" />
             {/* button */}
             <div className="flex justify-center mt-4">
-              <button className="xl:w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl w-full mx-4 mb-4">
+              <button className="xl:w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl w-full mx-10 sm:mx-4 mb-4">
                 Get started
               </button>
             </div>
@@ -185,7 +185,7 @@ export default function FourthSection() {
                     <h1 className="text-[24px] font-[600] text-[#101828] mb-4">
                       Business Plan
                     </h1>
-                    <div className="w-[72px] h-[24px] bg-[#faf5ff] rounded-2xl flex items-center justify-center ml-2">
+                    <div className="w-[72px] h-[24px] bg-[#faf5ff] rounded-2xl items-center justify-center ml-2 hidden sm:flex">
                       <h4 className="text-[14px] font-[500] text-[#6941C6]">
                         Popular
                       </h4>
@@ -337,7 +337,7 @@ export default function FourthSection() {
               <hr className="mt-10 border-[1px]" />
               {/* button */}
               <div className="flex justify-center mt-4">
-                <button className="w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl mb-4">
+              <button className="xl:w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl w-full mx-10 sm:mx-4 mb-4">
                   Get started
                 </button>
               </div>
@@ -352,7 +352,7 @@ export default function FourthSection() {
                     <h1 className="text-[24px] font-[600] text-[#101828] mb-4">
                       Business Plan
                     </h1>
-                    <div className="w-[72px] h-[24px] bg-[#faf5ff] rounded-2xl flex items-center justify-center ml-2">
+                    <div className="w-[72px] h-[24px] bg-[#faf5ff] rounded-2xl items-center justify-center ml-2 hidden sm:flex">
                       <h4 className="text-[14px] font-[500] text-[#6941C6]">
                         Popular
                       </h4>
@@ -504,7 +504,7 @@ export default function FourthSection() {
               <hr className="mt-10 border-[1px]" />
               {/* button */}
               <div className="flex justify-center mt-4">
-                <button className="w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl mb-4">
+              <button className="xl:w-[528px] h-[48px] bg-[#d934a1] text-white rounded-xl w-full mx-10 sm:mx-4 mb-4">
                   Get started
                 </button>
               </div>

@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import  { useRouter } from "next/navigation";
 
 // Images
 import CustomerImage1 from "@/../public/img/customerImage1.png";
@@ -15,6 +16,8 @@ import Right from "@/../public/img/right.png";
 
 export default function FifthSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const router = useRouter();
 
   //    button for next page
   const nextButton = () => {
@@ -52,7 +55,7 @@ export default function FifthSection() {
             <button className="w-[155px] h-[48px] bg-[#ffffff] border-[1.5px] border-solid border-[#d0d5dd] rounded-lg text-[16px] font-[600] text-[#344054] mr-6">
               Our customers
             </button>
-            <button className="w-[155px] h-[48px] bg-[#f5169c] rounded-lg text-[#ffffff] text-[16px] font-[600]">
+            <button className="w-[155px] h-[48px] bg-[#f5169c] rounded-lg text-[#ffffff] text-[16px] font-[600]" onClick={()=>{ router.push("/signup")}}>
               Create account
             </button>
           </div>

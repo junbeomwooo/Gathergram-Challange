@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 // Images
@@ -9,17 +11,35 @@ import Component114 from "@/../../public/img/Component 114.png";
 import Component115 from "@/../public/img/Component 115.png";
 import Rectangle from "@/../public/img/Rectangle.png";
 
+import { useRouter } from "next/navigation";
+import { useRef } from "react";
+
 export default function FirstSection() {
+
+  const emailRef = useRef<HTMLInputElement>(null);
+  const router = useRouter();
+
+  const onClickMoveToSignUpwithEmail = () => {
+    const email = emailRef.current?.value || "";
+
+    if (email.trim()) {
+      router.push(`/signup?email=${encodeURIComponent(email)}`);
+    } else {
+      router.push('/signup');
+    }
+
+
+  }
   return (
     <div id="home">
       {/* Main: "Plan, Share, and Celebrate Your Big Day in One Place" */}
       <div>
         <div className="xl:flex 2xl:px-40 2xl:justify-between m-auto pt-30  px-8 ">
           <div>
-            <div className="w-full h-[820px] mt-40">
+            <div className="w-full xl:h-[820px] mt-40">
               {/* Major headings */}
               <div className="2xl:w-[758px] 2xl:h-[300px]">
-                <h1 className="font-[700] 2xl:text-[82px] text-[60px] sm:text-[66px] md:text-[80px] leading-[100px]">
+                <h1 className="font-[700] 2xl:text-[82px] text-[45px] sm:text-[66px] md:text-[80px] leading-[80px] sm:leading-[100px]">
                   &quot;Plan, Share, and Celebrate Your Big Day in One
                   Place&quot;
                 </h1>
@@ -27,7 +47,7 @@ export default function FirstSection() {
 
               {/* Minor headings */}
               <div className="2xl:w-[758px] h-[72px]">
-                <h4 className="font-[400] text-[22px] leading-[36px] mt-4">
+                <h4 className="font-[400] text-[17px] sm:text-[22px] leading-[36px] mt-4">
                   &quot;Create unforgettable memories with a personalized
                   wedding platform for you and your guests.&quot;
                 </h4>
@@ -36,20 +56,21 @@ export default function FirstSection() {
               {/* Enter your email adress */}
               <div className="flex 2xl:w-[640px] h-[72]px 2xl:justify-between mt-14">
                 <input
-                  className="w-[330px] 2xl:w-[452px] h-[72]px bg-[#f5f5f5] rounded-full
-          px-10 font-[400]"
+                  className="w-full sm:w-[330px] 2xl:w-[452px] h-[72]px bg-[#f5f5f5] rounded-full
+          px-10 font-[400] text-[12px] sm:text-[18px]"
                   placeholder="Enter your email adress"
+                  ref={emailRef}
                 />
 
-                <button className="w-[140px] 2xl:w-[176px] h-[72px] rounded-full flex items-center justify-center bg-[#d934a1] ml-4">
-                  <h3 className="text-[18px] font-[700] text-white">
+                <button className="w-[140px] 2xl:w-[176px] h-[72px] rounded-full flex items-center justify-center bg-[#d934a1] ml-4" onClick={onClickMoveToSignUpwithEmail}>
+                  <h3 className="text-[15px] sm:text-[18px] font-[700] text-white">
                     Get started
                   </h3>
                 </button>
               </div>
 
               {/* +2K people Joined */}
-              <div className="w-[344px] h-[60px] flex relative items-center mt-10">
+              <div className="sm:w-[344px] h-[60px] flex relative items-center mt-10">
                 {/* Image */}
                 <div className="h-full">
                   <Image
@@ -87,7 +108,7 @@ export default function FirstSection() {
 
                 {/* Text */}
                 <div className="absolute right-0">
-                  <h3 className="font-[400] text-[14px]">+2K people Joined!</h3>
+                  <h3 className="font-[400] text-[12px] sm:text-[14px]">+2K people Joined!</h3>
                 </div>
               </div>
             </div>
@@ -97,13 +118,13 @@ export default function FirstSection() {
             alt="Rectangle"
             width={552}
             height={557}
-            className="xl:w-[552px] xl:h-[557px] xl:mt-40 xl:mb-0 mb-20 m-auto"
+            className="xl:w-[552px] xl:h-[557px] xl:mt-40 xl:mb-0 mb-20 m-auto mt-20"
           />
         </div>
 
         {/* section */}
-        <div className="w-full 2xl:h-[225px] bg-[#212121] 2xl:flex items-center justify-around px-20 py-20 2xl:py-0">
-          <div className="2xl:w-[860px] 2xl:h-[100px] text-white text-[36px] font-[400] leading-[50px]">
+        <div className="w-full 2xl:h-[225px] bg-[#212121] 2xl:flex items-center justify-around px-8 sm:px-20 py-20 2xl:py-0">
+          <div className="2xl:w-[860px] 2xl:h-[100px] text-white text-[24px] sm:text-[36px] font-[400] leading-[50px]">
             <h2>
               &quot;Powerful tool to manage your wedding, engage guests, and
               celebrate together effortlessly.&quot;

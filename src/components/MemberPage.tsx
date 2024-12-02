@@ -29,10 +29,10 @@ export default function MemberPage({
 
   return (
     <>
-      <div className="w-full h-[1024px] bg-white] 2xl:px-40 p-8 py-20 mt-10">
+      <div className="w-full h-[1024px] bg-white] 2xl:px-40 p-8 py-20 mt-[130px]">
         <div className="flex justify-center w-full ">
           <div className="text-center md:w-[650px]">
-            <h1 className="text-[80px] font-[600] text-[#F5169c]">WELCOME</h1>
+            <h1 className="text-[60px] sm:text-[80px] font-[600] text-[#F5169c]">WELCOME</h1>
             <h2 className="text-[40px] font-[500] text-[#ff00a2] mt-6">
               TO THE GATHERGRAM{" "}
             </h2>

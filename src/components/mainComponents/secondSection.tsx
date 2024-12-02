@@ -8,11 +8,11 @@ import CustomLoveStoryPage from "@/../public/img/CustomLoveStoryPage.png";
 export default function SecondSection() {
   return (
     <div id="features">
-            <div className="w-full 2xl:h-[711px] mt-32">
+      <div className="w-full 2xl:h-[711px] mt-32">
         {/*title */}
         <div className="2xl:w-[821px] m-auto">
           <h1 className="font-[600] text-[48px] text-center">Our Features</h1>
-          <h3 className="text-[22px] font-[400] mt-10 text-center leading-[36px]">
+          <h3 className="text-[18px] sm:text-[22px] font-[400] mt-10 text-center leading-[36px] px-8 lg:px-0">
             &quot;Easily create and manage your wedding events, from the
             ceremony to the reception.&quot;
           </h3>

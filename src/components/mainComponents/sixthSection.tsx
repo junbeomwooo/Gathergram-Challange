@@ -13,7 +13,7 @@ import Avartar3 from "@/../public/img/Avatar3.png";
 
 export default function SixthSection() {
   return (
-    <div className="w-full xl:h-[1136px] bg-white mt-28 h-full">
+    <div className="w-full xl:h-[1136px] bg-white mt-28 h-full mb-10 sm:mb-0">
       {/* title */}
       <div className="text-center m-auto px-8 xl:px-0">
         <h1 className="text-[36px] font-[600] text-[#101828] leading-[44px]">
