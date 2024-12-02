@@ -5,7 +5,7 @@ export default function CustomWarningAlert({
   message,
   setIsWarningAlertOpen,
 }: {
-  message: any;
+  message: string;
   setIsWarningAlertOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }) {
   const errormsg = message;

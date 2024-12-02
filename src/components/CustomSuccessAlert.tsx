@@ -9,7 +9,7 @@ export default function CustomSuccessAlert({
   setIsSuccessAlertOpen,
   emailName,
 }: {
-  message: any;
+  message: string;
   setIsSuccessAlertOpen: React.Dispatch<React.SetStateAction<boolean>>;
   emailName: string;
 }) {
