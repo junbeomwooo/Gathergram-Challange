@@ -14,6 +14,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Gathergram",
   description: "Celebrate, Share, Remember All in One Place",
+  icons: {
+    icon: "/img/logo.png",
+  },
 };
 
 export default function RootLayout({
