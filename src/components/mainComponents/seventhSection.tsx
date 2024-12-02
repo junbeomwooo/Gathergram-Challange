@@ -22,7 +22,7 @@ export default function SeventhSection() {
         </div>
 
         {/* image */}
-        <Image src="/img/Rectangle.png" alt={"Rectangle"} width={567} height={480} className="w-[567px] h-auto rounded-xl mt-16 m-auto 2xl:m-0"/>
+        <Image src="/img/Rectangle.png" alt="rectangle" width={567} height={480} className="w-[567px] h-auto rounded-xl mt-16 m-auto 2xl:m-0"/>
       </div>
     </div>
   );

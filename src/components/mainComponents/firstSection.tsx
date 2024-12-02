@@ -106,7 +106,7 @@ export default function FirstSection() {
           </div>
           <Image
             src="/img/Rectangle.png"
-            alt="Rectangle"
+            alt="rectangle"
             width={552}
             height={557}
             className="xl:w-[552px] xl:h-[557px] xl:mt-40 xl:mb-0 mb-20 m-auto mt-20"
