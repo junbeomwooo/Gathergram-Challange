@@ -1,14 +1,14 @@
 import Image from "next/image";
 
-import Dotline from "@/../public/img/Dotline.png";
-
 export default function ThirdSection() {
   return (
     <div className="w-full xl:h-[898px] mt-32 bg-[#212121] text-white relative" id="howItWorks">
     <Image
-      src={Dotline}
+      src="/img/Dotline.png"
+      width={1000}
+      height={1000}
       alt="background dot line"
-      className="absolute mt-80 z-0"
+      className="absolute mt-80 z-0 w-full h-auto"
     />
     <div className="2xl:w-[821px] m-auto pt-32 px-10">
       <h1 className="font-[600] text-[48px] text-center">How It works</h1>

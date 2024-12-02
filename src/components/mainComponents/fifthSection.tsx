@@ -4,16 +4,6 @@ import Image from "next/image";
 import { useState } from "react";
 import  { useRouter } from "next/navigation";
 
-// Images
-import CustomerImage1 from "@/../public/img/customerImage1.png";
-import CustomerImage2 from "@/../public/img/customerImage2.png";
-import CustomerImage3 from "@/../public/img/customerImage3.png";
-import CustomerImage4 from "@/../public/img/customerImage4.png";
-import CustomerImage5 from "@/../public/img/customerImage5.png";
-import Star from "@/../public/img/Star.png";
-import Left from "@/../public/img/left.png";
-import Right from "@/../public/img/right.png";
-
 export default function FifthSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -71,7 +61,7 @@ export default function FifthSection() {
             {/* Image1 */}
             <div className="relative w-[360px] h-[480px] flex justify-center mr-8">
               <Image
-                src={CustomerImage1}
+                src="/img/customerImage1.png"
                 alt={"Customer Image1"}
                 width={360}
                 height={480}
@@ -82,34 +72,34 @@ export default function FifthSection() {
                 {/* stars */}
                 <div className="flex mb-5">
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />{" "}
-                  <Image src={Star} width={20} height={20} alt="star" />
+                  <Image src="/img/Star.png" width={20} height={20} alt="star" />
                 </div>
                 <div className="text-white">
                   <h1 className="text-[30px] font-[600] mb-5">Alisa Hester</h1>
@@ -122,7 +112,7 @@ export default function FifthSection() {
             {/* Image2 */}
             <div className="relative w-[360px] h-[480px] flex justify-center mr-8">
               <Image
-                src={CustomerImage2}
+                src="/img/customerImage2.png"
                 alt={"Customer Image2"}
                 width={360}
                 height={480}
@@ -136,34 +126,34 @@ export default function FifthSection() {
                 {/* stars */}
                 <div className="flex mb-5">
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />{" "}
-                  <Image src={Star} width={20} height={20} alt="star" />
+                  <Image src="/img/Star.png" width={20} height={20} alt="star" />
                 </div>
                 <div className="text-white">
                   <h1 className="text-[30px] font-[600] mb-5">Rich Wilson</h1>
@@ -180,7 +170,7 @@ export default function FifthSection() {
             {/* Image3 */}
             <div className="relative w-[360px] h-[480px] flex justify-center mr-8">
               <Image
-                src={CustomerImage3}
+                src="/img/customerImage3.png"
                 alt={"Customer Image3"}
                 width={360}
                 height={480}
@@ -191,34 +181,34 @@ export default function FifthSection() {
                 {/* stars */}
                 <div className="flex mb-5">
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />{" "}
-                  <Image src={Star} width={20} height={20} alt="star" />
+                  <Image src="/img/Star.png" width={20} height={20} alt="star" />
                 </div>
                 <div className="text-white">
                   <h1 className="text-[30px] font-[600] mb-5">Annie Stanley</h1>
@@ -233,7 +223,7 @@ export default function FifthSection() {
             {/* Image4 */}
             <div className="relative w-[360px] h-[480px] flex justify-center mr-8">
               <Image
-                src={CustomerImage4}
+                src="/img/customerImage4.png"
                 alt={"Customer Image4"}
                 width={360}
                 height={480}
@@ -244,34 +234,34 @@ export default function FifthSection() {
                 {/* stars */}
                 <div className="flex mb-5">
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />{" "}
-                  <Image src={Star} width={20} height={20} alt="star" />
+                  <Image src="/img/Star.png" width={20} height={20} alt="star" />
                 </div>
                 <div className="text-white">
                   <h1 className="text-[30px] font-[600] mb-5">Johnny Bell</h1>
@@ -284,7 +274,7 @@ export default function FifthSection() {
             {/* Image5 */}
             <div className="relative w-[360px] h-[480px] flex justify-center">
               <Image
-                src={CustomerImage5}
+                src="/img/customerImage5.png"
                 alt={"Customer Image5"}
                 width={360}
                 height={480}
@@ -295,34 +285,34 @@ export default function FifthSection() {
                 {/* stars */}
                 <div className="flex mb-5">
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />
                   <Image
-                    src={Star}
+                    src="/img/Star.png"
                     width={20}
                     height={20}
                     alt="star"
                     className="mr-1"
                   />{" "}
-                  <Image src={Star} width={20} height={20} alt="star" />
+                  <Image src="/img/Star.png" width={20} height={20} alt="star" />
                 </div>
                 <div className="text-white">
                   <h1 className="text-[30px] font-[600] mb-5">Mia Ward</h1>
@@ -342,7 +332,7 @@ export default function FifthSection() {
         <div className="flex mt-8">
           <button className="w-[56px] h-[56px] rounded-full border border-solid border-[#eaecf0] bg-white flex justify-center items-center mr-6" onClick={previousButton}>
             <Image
-              src={Left}
+              src="/img/left.png"
               alt="left buttons for slides"
               width={14}
               height={14}
@@ -351,7 +341,7 @@ export default function FifthSection() {
 
           <button className="w-[56px] h-[56px] rounded-full border border-solid border-[#eaecf0] bg-white flex justify-center items-center" onClick={nextButton}>
             <Image
-              src={Right}
+              src="/img/right.png"
               alt="right buttons for slides"
               width={14}
               height={14}

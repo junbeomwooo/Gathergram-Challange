@@ -1,9 +1,5 @@
 import Image from "next/image";
 
-// images
-import Right2 from "@/../public/img/right2.png"
-import Rectangle from "@/../public/img/Rectangle.png";
-
 
 export default function SeventhSection() {
   return (
@@ -21,12 +17,12 @@ export default function SeventhSection() {
           </h4>
           <button className="flex w-full sm:w-[373px] h-[72px] bg-[#ffd0ec] rounded-full items-center justify-center m-auto 2xl:m-0 ">
           <h3 className="mr-2">Create Your Event for Free</h3>
-          <Image src={Right2} alt="right button" width={24} height={24} />
+          <Image src="/img/right2.png" alt="right button" width={24} height={24} />
           </button>
         </div>
 
         {/* image */}
-        <Image src={Rectangle} alt={"Rectangle"} width={567} height={480} className="w-[567px] h-auto rounded-xl mt-16 m-auto 2xl:m-0"/>
+        <Image src="/img/Rectangle.png" alt={"Rectangle"} width={567} height={480} className="w-[567px] h-auto rounded-xl mt-16 m-auto 2xl:m-0"/>
       </div>
     </div>
   );

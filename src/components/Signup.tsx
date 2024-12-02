@@ -8,19 +8,6 @@ import CustomSuccessAlert from "./CustomSuccessAlert";
 import Cookies from 'js-cookie';
 import { useSearchParams } from "next/navigation";
 
-
-// images
-import WeddingImage from "@/../public/img/weddingImage.png";
-import GoogleLogo from "@/../public/img/googleLogo.png";
-import FacebookLogo from "@/../public/img/facebookLogo.png";
-import AppleLogo from "@/../public/img/appleLogo.png";
-import Visible from "@/../public/img/visible.png";
-import ArrowBottom from "@/../public/img/Arrow - Bottom.png";
-
-// countries image
-import Canada from "@/../public/img/Canada.png";
-import America from "@/../public/img/America.png";
-
 export default function Signup() {
   // State for visible password
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -47,7 +34,7 @@ export default function Signup() {
   const [countryCode, setCountryCode] = useState({
     country: "Canada",
     code: "+1",
-    src: Canada,
+    src: "/img/Canada.png",
   });
 
   // For the querystring
@@ -59,8 +46,8 @@ export default function Signup() {
 
   // Array containing country codes and informations
   const arrayCountryCodes = [
-    { country: "United States", code: "+1", src: America },
-    { country: "Canada", code: "+1", src: Canada },
+    { country: "United States", code: "+1", src: "/img/America.png" },
+    { country: "Canada", code: "+1", src: "/img/Canada.png" },
   ];
 
   // function for create member
@@ -216,7 +203,7 @@ export default function Signup() {
       {/* Image */}
       <div className="relative 2xl:max-w-[720px] hidden xl:block h-full">
         <Image
-          src={WeddingImage}
+          src="/img/weddingImage.png"
           alt="wedding image"
           width={720}
           height={1024}
@@ -306,7 +293,7 @@ export default function Signup() {
               type="button"
             >
               <Image
-                src={ArrowBottom}
+                src="/img/Arrow - Bottom.png"
                 alt="toggle country code drop down"
                 width={9.33}
                 height={4.67}
@@ -360,7 +347,7 @@ export default function Signup() {
               name="password"
             />
             <Image
-              src={Visible}
+              src="/img/visible.png"
               alt="toggle password visibility"
               width={19}
               height={18}
@@ -403,7 +390,7 @@ export default function Signup() {
             {/* google */}
             <button className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg">
               <Image
-                src={GoogleLogo}
+                src="/img/googleLogo.png"
                 alt="google logo"
                 width={16}
                 height={16}
@@ -417,7 +404,7 @@ export default function Signup() {
             {/* facebook */}
             <button className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg">
               <Image
-                src={FacebookLogo}
+                src="/img/facebookLogo.png"
                 alt="facebook logo"
                 width={16}
                 height={16}
@@ -431,7 +418,7 @@ export default function Signup() {
             {/* apple */}
             <button className="w-1/3 2xl:w-[181px] h-full bg-[#ffffff] flex items-center justify-center border border-solid border-[#323232] rounded-lg">
               <Image
-                src={AppleLogo}
+                src="/img/appleLogo.png"
                 alt="apple logo"
                 width={15.05}
                 height={18.48}

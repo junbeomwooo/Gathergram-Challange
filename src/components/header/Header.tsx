@@ -1,10 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Logo from "@/../public/img/logo.png";
 import { useState } from "react";
 import Link from "next/link";
-import Cancle from "@/../public/img/cancle.png";
 import { useRouter, usePathname } from "next/navigation";
 import { LuMenu } from "react-icons/lu";
 
@@ -86,7 +84,7 @@ export default function Header() {
             </h2>
           </div>
           <Image
-            src={Cancle}
+            src="/img/cancle.png"
             width={12}
             height={12}
             alt="cancle menu"
@@ -109,7 +107,7 @@ export default function Header() {
             </Link>
           </div>
           <Image
-            src={Cancle}
+            src="/img/cancle.png"
             width={15}
             height={15}
             alt="cancle"
@@ -126,7 +124,7 @@ export default function Header() {
           onClick={() => router.push("/")}
         >
           <Image
-            src={Logo}
+            src="/img/logo.png"
             alt="Gathergram Logo"
             width={28.24}
             height={40}

@@ -7,15 +7,6 @@ import Link from "next/link";
 import CustomSuccessAlert from "./CustomSuccessAlert";
 import CustomWarningAlert from "./CustomWarningAlert";
 
-// Images
-import WeddingImage from "@/../public/img/weddingImage.png";
-import secondLogoVector from "@/../public/img/secondLogoVector.png";
-import GatherGramFont from "@/../public/img/GatherGramFont.png";
-import GoogleLogo from "@/../public/img/googleLogo.png";
-import FacebookLogo from "@/../public/img/facebookLogo.png";
-import AppleLogo from "@/../public/img/appleLogo.png";
-import Visible from "@/../public/img/visible.png";
-
 export default function Login() {
   // state for visible password
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
@@ -145,7 +136,7 @@ export default function Login() {
       {/* Image */}
       <div className="relative 2xl:max-w-[720px] hidden xl:block">
         <Image
-          src={WeddingImage}
+          src="/img/weddingImage.png"
           alt="wedding image"
           width={720}
           height={1024}
@@ -158,14 +149,14 @@ export default function Login() {
         {/* Logo */}
         <div className="flex items-center justify-center mb-28">
           <Image
-            src={secondLogoVector}
+            src="/img/secondLogoVector.png"
             alt="logo"
             width={47.69}
             height={59.37}
             className="w-[47.69px] h-[59.37px]"
           />
           <Image
-            src={GatherGramFont}
+            src="/img/GatherGramFont.png"
             alt="logo font"
             width={101}
             height={38}
@@ -209,7 +200,7 @@ export default function Login() {
               name="password"
             />
             <Image
-              src={Visible}
+              src="/img/visible.png"
               alt="toggle password visibility"
               width={19}
               height={18}
@@ -243,7 +234,7 @@ export default function Login() {
               type="button"
             >
               <Image
-                src={GoogleLogo}
+                src="/img/googleLogo.png"
                 alt="google logo"
                 width={16}
                 height={16}
@@ -260,7 +251,7 @@ export default function Login() {
               type="button"
             >
               <Image
-                src={FacebookLogo}
+                src="/img/facebookLogo.png"
                 alt="facebook logo"
                 width={16}
                 height={16}
@@ -277,7 +268,7 @@ export default function Login() {
               type="button"
             >
               <Image
-                src={AppleLogo}
+                src="/img/appleLogo.png"
                 alt="apple logo"
                 width={15.05}
                 height={18.48}

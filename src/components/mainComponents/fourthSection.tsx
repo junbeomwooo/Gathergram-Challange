@@ -3,8 +3,6 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import Check from "@/../public/img/Check icon.png";
-
 export default function FourthSection() {
   // state for buttons (montly || annual);
   const [isButtonOption, setIsButtonOption] = useState("monthly");
@@ -101,31 +99,31 @@ export default function FourthSection() {
             <div className="mt-8 mx-10 flex justify-between">
               <div>
                 <div className="flex items-center mb-5">
-                  <Image src={Check} alt="check icon" width={24} height={24} />
+                  <Image src="/img/Check icon.png" alt="check icon" width={24} height={24} />
                   <h2 className="ml-3 text-[16px] font-[400] text-[#475467]">
                     Access to basic features
                   </h2>
                 </div>
                 <div className="flex items-center mb-5">
-                  <Image src={Check} alt="check icon" width={24} height={24} />
+                  <Image src="/img/Check icon.png" alt="check icon" width={24} height={24} />
                   <h2 className="ml-3 text-[16px] font-[400] text-[#475467]">
                     Basic reporting + analytics
                   </h2>
                 </div>
                 <div className="flex items-center mb-5">
-                  <Image src={Check} alt="check icon" width={24} height={24} />
+                  <Image src="/img/Check icon.png" alt="check icon" width={24} height={24} />
                   <h2 className="ml-3 text-[16px] font-[400] text-[#475467]">
                     Up to 10 individual users
                   </h2>
                 </div>
                 <div className="flex items-center mb-5">
-                  <Image src={Check} alt="check icon" width={24} height={24} />
+                  <Image src="/img/Check icon.png" alt="check icon" width={24} height={24} />
                   <h2 className="ml-3 text-[16px] font-[400] text-[#475467]">
                     20GB individual data
                   </h2>
                 </div>
                 <div className="flex items-center">
-                  <Image src={Check} alt="check icon" width={24} height={24} />
+                  <Image src="/img/Check icon.png" alt="check icon" width={24} height={24} />
                   <h2 className="ml-3 text-[16px] font-[400] text-[#475467]">
                     Basic chat support
                   </h2>
@@ -133,31 +131,31 @@ export default function FourthSection() {
               </div>
               <div>
                 <div className="flex items-center mb-5">
-                  <Image src={Check} alt="check icon" width={24} height={24} />
+                  <Image src="/img/Check icon.png" alt="check icon" width={24} height={24} />
                   <h2 className="ml-3 text-[16px] font-[400] text-[#475467]">
                     Attend events
                   </h2>
                 </div>
                 <div className="flex items-center mb-5">
-                  <Image src={Check} alt="check icon" width={24} height={24} />
+                  <Image src="/img/Check icon.png" alt="check icon" width={24} height={24} />
                   <h2 className="ml-3 text-[16px] font-[400] text-[#475467]">
                     Automatic updates
                   </h2>
                 </div>
                 <div className="flex items-center mb-5">
-                  <Image src={Check} alt="check icon" width={24} height={24} />
+                  <Image src="/img/Check icon.png" alt="check icon" width={24} height={24} />
                   <h2 className="ml-3 text-[16px] font-[400] text-[#475467]">
                     Backup your account
                   </h2>
                 </div>
                 <div className="flex items-center mb-5">
-                  <Image src={Check} alt="check icon" width={24} height={24} />
+                  <Image src="/img/Check icon.png" alt="check icon" width={24} height={24} />
                   <h2 className="ml-3 text-[16px] font-[400] text-[#475467]">
                     Audit log and notes
                   </h2>
                 </div>
                 <div className="flex items-center">
-                  <Image src={Check} alt="check icon" width={24} height={24} />
+                  <Image src="/img/Check icon.png" alt="check icon" width={24} height={24} />
                   <h2 className="ml-3 text-[16px] font-[400] text-[#475467]">
                     Feature requests
                   </h2>
@@ -222,7 +220,7 @@ export default function FourthSection() {
                 <div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -233,7 +231,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -244,7 +242,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -255,7 +253,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -266,7 +264,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -279,7 +277,7 @@ export default function FourthSection() {
                 <div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -290,7 +288,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -301,7 +299,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -312,7 +310,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -323,7 +321,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -389,7 +387,7 @@ export default function FourthSection() {
                 <div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -400,7 +398,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -411,7 +409,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -422,7 +420,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -433,7 +431,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -446,7 +444,7 @@ export default function FourthSection() {
                 <div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -457,7 +455,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -468,7 +466,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -479,7 +477,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center mb-5">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}
@@ -490,7 +488,7 @@ export default function FourthSection() {
                   </div>
                   <div className="flex items-center">
                     <Image
-                      src={Check}
+                      src="/img/Check icon.png"
                       alt="check icon"
                       width={24}
                       height={24}

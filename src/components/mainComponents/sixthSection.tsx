@@ -1,15 +1,6 @@
 import Image from "next/image";
 
 // images
-import Icon1 from "@/../public/img/icon1.png";
-import Icon2 from "@/../public/img/icon2.png";
-import Icon3 from "@/../public/img/icon3.png";
-import Icon4 from "@/../public/img/icon4.png";
-import Icon5 from "@/../public/img/icon5.png";
-import Icon6 from "@/../public/img/icon6.png";
-import Avartar1 from "@/../public/img/Avatar1.png";
-import Avartar2 from "@/../public/img/Avatar2.png";
-import Avartar3 from "@/../public/img/Avatar3.png";
 
 export default function SixthSection() {
   return (
@@ -29,7 +20,7 @@ export default function SixthSection() {
         {/* icon 1 */}
         <div className="xl:w-[384px] h-[178px] text-center mb-10 xl:m-0">
           <div className="w-[48px] h-[48px] bg-[#ffe3f3] border-[8px] border-solid border-[#fff8fc] rounded-full flex items-center justify-center m-auto">
-            <Image src={Icon1} alt="icon1" width={20} height={17.83} />
+            <Image src="/img/icon1.png" alt="icon1" width={20} height={17.83} />
           </div>
           <h3 className="text-[20px] font-[600] text-[#101828] my-4">
             Is there a free trial available?
@@ -43,7 +34,7 @@ export default function SixthSection() {
         {/* icon 2 */}
         <div className="xl:w-[384px] h-[178px] text-center mb-10 xl:m-0">
           <div className="w-[48px] h-[48px] bg-[#ffe3f3] border-[8px] border-solid border-[#fff8fc] rounded-full flex items-center justify-center m-auto">
-            <Image src={Icon2} alt="icon2" width={16} height={18} />
+            <Image src="/img/icon2.png" alt="icon2" width={16} height={18} />
           </div>
           <h3 className="text-[20px] font-[600] text-[#101828] my-4">
             Can I change my plan later?
@@ -57,7 +48,7 @@ export default function SixthSection() {
         {/* icon 3 */}
         <div className="xl:w-[384px] h-[178px] text-center mb-10 xl:m-0">
           <div className="w-[48px] h-[48px] bg-[#ffe3f3] border-[8px] border-solid border-[#fff8fc] rounded-full flex items-center justify-center m-auto">
-            <Image src={Icon3} alt="icon3" width={20} height={20} />
+            <Image src="/img/icon3.png" alt="icon3" width={20} height={20} />
           </div>
           <h3 className="text-[20px] font-[600] text-[#101828] my-4">
             What is your cancellation policy?
@@ -74,7 +65,7 @@ export default function SixthSection() {
         {/* icon 4 */}
         <div className="xl:w-[384px] h-[178px] text-center mb-10 xl:m-0">
           <div className="w-[48px] h-[48px] bg-[#ffe3f3] border-[8px] border-solid border-[#fff8fc] rounded-full flex items-center justify-center m-auto">
-            <Image src={Icon4} alt="icon4" width={16} height={20} />
+            <Image src="/img/icon4.png" alt="icon4" width={16} height={20} />
           </div>
           <h3 className="text-[20px] font-[600] text-[#101828] my-4">
             Can other info be added to an invoice?
@@ -88,7 +79,7 @@ export default function SixthSection() {
         {/* icon 5 */}
         <div className="xl:w-[384px] h-[178px] text-center mb-10 xl:m-0">
           <div className="w-[48px] h-[48px] bg-[#ffe3f3] border-[8px] border-solid border-[#fff8fc] rounded-full flex items-center justify-center m-auto">
-            <Image src={Icon5} alt="icon5" width={20} height={18} />
+            <Image src="/img/icon5.png" alt="icon5" width={20} height={18} />
           </div>
           <h3 className="text-[20px] font-[600] text-[#101828] my-4">
             How does billing work?
@@ -102,7 +93,7 @@ export default function SixthSection() {
         {/* icon 6 */}
         <div className="xl:w-[384px] h-[178px] text-center xl:m-0">
           <div className="w-[48px] h-[48px] bg-[#ffe3f3] border-[8px] border-solid border-[#fff8fc] rounded-full flex items-center justify-center m-auto">
-            <Image src={Icon6} alt="icon3" width={20} height={16} />
+            <Image src="/img/icon6.png" alt="icon3" width={20} height={16} />
           </div>
           <h3 className="text-[20px] font-[600] text-[#101828] my-4">
             How do I change my account email?
@@ -120,21 +111,21 @@ export default function SixthSection() {
         <div className="pt-10">
           <div className="relative w-[120px] h-[56px] m-auto">
             <Image
-              src={Avartar1}
+              src="/img/Avatar1.png"
               alt="Avartar1"
               width={48}
               height={48}
               className="absolute left-0 bottom-0"
             />
             <Image
-              src={Avartar2}
+              src="/img/Avatar2.png"
               alt="Avartar2"
               width={56}
               height={56}
               className="absolute left-[30px] z-10"
             />
             <Image
-              src={Avartar3}
+              src="/img/Avatar3.png"
               alt="Avartar3"
               width={48}
               height={48}

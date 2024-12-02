@@ -2,13 +2,6 @@
 
 import Image from "next/image";
 import { useState } from "react";
-
-// images
-import Logo from "@/../public/img/logo.png";
-import Youtube from "@/../public/img/Icon awesome-youtube.png";
-import Linkedin from "@/../public/img/Icon awesome-linkedin.png";
-import Facebook from "@/../public/img/Icon awesome-facebook.png";
-import Twitter from "@/../public/img/Icon awesome-twitter.png";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { usePathname } from "next/navigation";
 
@@ -63,7 +56,7 @@ export default function Footer() {
           <div className="lg:w-5/12 w-full">
             {/* logo */}
             <div className="flex items-center justify-center lg:justify-start">
-              <Image src={Logo} alt="logo" width={28.24} height={40} />
+              <Image src="/img/logo.png" alt="logo" width={28.24} height={40} />
               <h1 className="text-[30px] font-[500] ml-4">GatherGram</h1>
             </div>
 
@@ -76,28 +69,28 @@ export default function Footer() {
             {/* social media */}
             <div className="flex w-[215.22px] justify-between items-center mt-8 m-auto">
               <Image
-                src={Twitter}
+                src="/img/Icon awesome-twitter.png"
                 alt="Twitter"
                 width={30.29}
                 height={24.6}
                 className="w-[30.29px] h-[24.6px]"
               />
               <Image
-                src={Facebook}
+                src="/img/Icon awesome-facebook.png"
                 alt="Facebook"
                 width={29.34}
                 height={29.16}
                 className="w-[29.34px] h-[29.16px]"
               />
               <Image
-                src={Linkedin}
+                src="/img/Icon awesome-linkedin.png"
                 alt="Linkedin"
                 width={26.5}
                 height={26.5}
                 className="w-[26.5px] h-[26.5px]"
               />
               <Image
-                src={Youtube}
+                src="/img/Icon awesome-youtube.png"
                 alt="Youtube"
                 width={32.31}
                 height={22.72}

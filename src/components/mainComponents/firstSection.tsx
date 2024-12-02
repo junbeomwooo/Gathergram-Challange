@@ -2,15 +2,6 @@
 
 import Image from "next/image";
 
-// Images
-import Rectangle67 from "@/../../public/img/Rectangle 67.png";
-import Rectangle68 from "@/../../public/img/Rectangle 68.png";
-import Rectangle70 from "@/../../public/img/Rectangle 70.png";
-import Rectangle71 from "@/../../public/img/Rectangle 71.png";
-import Component114 from "@/../../public/img/Component 114.png";
-import Component115 from "@/../public/img/Component 115.png";
-import Rectangle from "@/../public/img/Rectangle.png";
-
 import { useRouter } from "next/navigation";
 import { useRef } from "react";
 
@@ -74,28 +65,28 @@ export default function FirstSection() {
                 {/* Image */}
                 <div className="h-full">
                   <Image
-                    src={Rectangle67}
+                    src="/img/Rectangle 67.png"
                     alt="people joined1"
                     width={60}
                     height={60}
                     className="absolute"
                   />
                   <Image
-                    src={Rectangle68}
+                    src="/img/Rectangle 68.png"
                     alt="people joined2"
                     width={60}
                     height={60}
                     className="absolute left-8"
                   />
                   <Image
-                    src={Rectangle70}
+                    src="/img/Rectangle 70.png"
                     alt="people joined3"
                     width={60}
                     height={60}
                     className="absolute left-16"
                   />
                   <Image
-                    src={Rectangle71}
+                    src="/img/Rectangle 71.png"
                     alt="people joined4"
                     width={60}
                     height={60}
@@ -114,7 +105,7 @@ export default function FirstSection() {
             </div>
           </div>
           <Image
-            src={Rectangle}
+            src="/img/Rectangle.png"
             alt="Rectangle"
             width={552}
             height={557}
@@ -137,7 +128,7 @@ export default function FirstSection() {
               {/* Image */}
               <div className="bg-[#eb44b2] w-[111px] h-[112px] rounded-full flex justify-center items-center">
                 <Image
-                  src={Component114}
+                  src="/img/Component 114.png"
                   alt="Connet with your guests"
                   width={50}
                   height={50}
@@ -155,7 +146,7 @@ export default function FirstSection() {
               {/* Image */}
               <div className="bg-[#eb44b2] w-[111px] h-[112px] rounded-full flex justify-center items-center">
                 <Image
-                  src={Component115}
+                  src="/img/Component 115.png"
                   alt="Easy event management"
                   width={50}
                   height={50}

@@ -1,11 +1,5 @@
 import Image from "next/image";
 
-// Images
-import Icon7 from "@/../public/img/Icon7.png";
-import Icon8 from "@/../public/img/Icon8.png";
-import Icon9 from "@/../public/img/Icon9.png";
-import Icon10 from "@/../public/img/Icon10.png";
-
 export default function EighthSection() {
   return (
     <div className="w-full xl:h-[670px] bg-white 2xl:px-28 py-20 px-8 " id="contact">
@@ -26,7 +20,7 @@ export default function EighthSection() {
         <div className="xl:w-[336.46px] w-full h-[341.16px] mb-6 xl:mb-0 bg-[#fff6fc] p-8 mr-8">
           {/* Image box */}
           <div className="w-[56.47px] h-[56.47px] rounded-2xl bg-[#f5169c] flex items-center justify-center">
-            <Image src={Icon7} width={21.89} height={20} alt="Icon7" />
+            <Image src="/img/Icon7.png" width={21.89} height={20} alt="Icon7" />
           </div>
 
           {/* information */}
@@ -47,7 +41,7 @@ export default function EighthSection() {
         <div className="xl:w-[336.46px] w-full h-[341.16px] mb-6 xl:mb-0 bg-[#fff6fc] p-8 mr-8">
           {/* Image box */}
           <div className="w-[56.47px] h-[56.47px] rounded-2xl bg-[#f5169c] flex items-center justify-center">
-            <Image src={Icon8} width={21.89} height={20} alt="Icon8" />
+            <Image src="/img/Icon8.png" width={21.89} height={20} alt="Icon8" />
           </div>
 
           {/* information */}
@@ -67,7 +61,7 @@ export default function EighthSection() {
         <div className="xl:w-[336.46px] w-full h-[341.16px] mb-6 xl:mb-0 bg-[#fff6fc] p-8 mr-8">
           {/* Image box */}
           <div className="w-[56.47px] h-[56.47px] rounded-2xl bg-[#f5169c] flex items-center justify-center">
-            <Image src={Icon9} width={21.89} height={20} alt="Icon9" />
+            <Image src="/img/Icon9.png" width={21.89} height={20} alt="Icon9" />
           </div>
 
           {/* information */}
@@ -87,7 +81,7 @@ export default function EighthSection() {
         <div className="xl:w-[336.46px] w-full  h-[341.16px] mb-6 xl:mb-0 bg-[#fff6fc] p-8">
           {/* Image box */}
           <div className="w-[56.47px] h-[56.47px] rounded-2xl bg-[#f5169c] flex items-center justify-center">
-            <Image src={Icon10} width={21.89} height={20} alt="Icon10" />
+            <Image src="/img/Icon10.png" width={21.89} height={20} alt="Icon10" />
           </div>
 
           {/* information */}

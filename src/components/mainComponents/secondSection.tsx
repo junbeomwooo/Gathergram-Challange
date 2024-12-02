@@ -1,10 +1,5 @@
 import Image from "next/image";
 
-import EventManagement from "@/../public/img/EventManagement.png";
-import GuestInteraction from "@/../public/img/GuestInteraction.png";
-import DonateContribute from "@/../public/img/DonateContribute.png";
-import CustomLoveStoryPage from "@/../public/img/CustomLoveStoryPage.png";
-
 export default function SecondSection() {
   return (
     <div id="features">
@@ -23,7 +18,7 @@ export default function SecondSection() {
           <div className="2xl:w-[1640px] xl:h-[480px] h-full bg-[#212121] mt-24 xl:flex w-full">
             <div className="2xl:w-1/4 h-full px-10 pb-20 pt-48">
               <Image
-                src={EventManagement}
+                src="/img/EventManagement.png"
                 width={54.5}
                 height={54.5}
                 alt={"Event Management"}
@@ -39,7 +34,7 @@ export default function SecondSection() {
             </div>
             <div className="2xl:w-1/4 2xl:h-[460px] px-10 pb-20 pt-[172px] bg-[#ffdef4] 2xl:mt-[20px] h-full">
               <Image
-                src={GuestInteraction}
+                src="/img/GuestInteraction.png"
                 width={56.56}
                 height={60}
                 alt={"Guest Intreratcion"}
@@ -55,7 +50,7 @@ export default function SecondSection() {
             </div>
             <div className="2xl:w-1/4 h-full px-10 pb-20 pt-48 bg-[#212121] ">
               <Image
-                src={DonateContribute}
+                src="/img/DonateContribute.png"
                 width={78.34}
                 height={52}
                 alt={"Donate Contribute"}
@@ -71,7 +66,7 @@ export default function SecondSection() {
             </div>
             <div className="2xl:w-1/4 h-full px-10 pb-20 pt-48 2xl:bg-[#212121] bg-[#ffdef4]  ">
               <Image
-                src={CustomLoveStoryPage}
+                src="/img/CustomLoveStoryPage.png"
                 width={63.4}
                 height={54}
                 alt={"Custom LoveS tory Page"}
