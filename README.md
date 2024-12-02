@@ -1,6 +1,6 @@
 # Gathergram: Frontend Development Challange'
 
-![Gathergaram](./gathergaram)
+![Gathergaram](./public/gathergaram.png)
 
 • [Visit the website here](https://gathergram-challange.vercel.app/)
 

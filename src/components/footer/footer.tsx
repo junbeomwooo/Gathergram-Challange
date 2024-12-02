@@ -5,7 +5,6 @@ import { useState } from "react";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { usePathname } from "next/navigation";
 import CustomWarningAlert from "../CustomWarningAlert";
-import { useRouter } from "next/navigation";
 
 export default function Footer() {
   // states for dropdown
@@ -13,8 +12,6 @@ export default function Footer() {
   const [isSupportUsOpen, setIsSupportUsOpen] = useState(false);
   const [isPartnerOpen, setIsPartnerOpen] = useState(false);
   const [isContactUsOpen, setIsContactUsOpen] = useState(false);
-
-  const router = useRouter();
 
   /** Error Custom */
   // State for Custom warning alert
