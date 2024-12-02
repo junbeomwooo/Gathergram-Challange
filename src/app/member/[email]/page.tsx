@@ -1,6 +1,10 @@
 import MemberPage from "@/components/MemberPage";
 
-export default function page({ params }: { params: { email: string } }) {
+type PageProps = {
+  params: { email: string };
+};
+
+export default function page({ params }: PageProps) {
   const { email } = params;
 
   return (
